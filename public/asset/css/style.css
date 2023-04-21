@@ -1,0 +1,277 @@
+/* Débuggueur CSS en cas de dépassement horizontal */
+/*
+* {
+    outline: 1px solid #000;
+} 
+*/
+
+.containerb {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.6rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 1.5rem;
+    /* Largeur > 576px */
+    @media screen and (min-width: 36em) {
+        max-width: 56rem;
+    }
+    /* Largeur > 768px */
+    @media screen and (min-width: 48em) {
+        max-width: 74rem;
+    }
+    /* Largeur > 992px */
+    @media screen and (min-width: 62em) {
+        max-width: 98rem;
+    }
+    /* Largeur > 1200px */
+    @media screen and (min-width: 75em) {
+        max-width: 114rem;
+    }
+    /* Largeur > 1392px */
+    @media screen and (min-width: 87em) {
+        max-width: 130rem;
+    }
+}
+
+header{
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+}
+
+header a{
+    display: block;
+    text-decoration: none;
+    padding: 1.5rem;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.except{
+    padding: 0;
+    padding-left: 1.5rem;
+}
+
+.except:hover{
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+header a:hover{
+    color: darkred;
+}
+
+li{
+    list-style: none;
+}
+
+.first-nav{
+    grid-column: 1/6;
+}
+
+.second-nav{
+    grid-column: 10/11;
+}
+
+.second-nav ul, .ulindex{
+    display: flex;
+}
+
+.dropdown-menu{
+    background-color: darkred;
+}
+
+main{
+    position: relative;
+    bottom: -20rem;
+}
+
+.notif{
+    grid-column: 1/-1;
+    display: flex;
+}
+
+.indexh1{
+    grid-column: 1/-1;
+    text-align: center;
+    color: darkred;
+    font-size: 56px;
+    background: repeating-linear-gradient(
+        -55deg,
+        #eee,
+        #eee 10px,
+        #fff 10px,
+        #fff 20px);
+    padding: 2rem;
+}
+
+.ulindex{
+    grid-column: 1/-1;
+    margin-top: 5rem;
+}
+
+.ulindex li{
+    border: solid darkred;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 3.5rem;
+    
+}
+
+.ulindex a{
+    color: darkred;
+}
+
+.ulindex a:hover{
+    color: black;
+}
+
+.flash{
+    grid-column: 1/-1;
+}
+
+.section{
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid black;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+}
+
+.section h1{
+    text-align: center;
+    color: darkred;
+    font-size: 56px;
+    padding-bottom: 3rem;
+}
+
+.divarticle{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.6rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 1.5rem;
+}
+
+.article{
+    grid-column: span 4;
+    border: solid black;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.article a:hover{
+    color: black;
+}
+
+.pagination{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    color: white;
+    background-color: #337ab7;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.articlesingle{
+    grid-column: 1/-1;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stockdispo{
+    color: rgb(9, 238, 96);
+}
+
+.stockindispo{
+    color: red;
+}
+
+form{
+    grid-column: 6/12;
+}
+
+.emptycard, .card, .confirmation, .profil, .error{
+    grid-column: 1/-1;
+}
+
+.delivery{
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    border-top: 1px solid black;
+    padding-top: 1rem;
+}
+
+.container{
+    width: 700px;
+}
+
+.connexion{
+    border: 1px solid;
+    padding: 3rem;
+}
+
+.stripeh1{
+    grid-column: 1/-1;
+    text-align: center;
+    color: darkred;
+    font-size: 56px;
+    margin-bottom: 3rem;
+}
+
+.stripe{
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+}
+
+.stripeh2{
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+}
+
+footer{
+    position: relative;
+    top: 22rem;
+    background-color: black;
+    color: whitesmoke;
+}
+
+footer nav{
+    grid-column: 1/-1;
+    display: flex;
+}
+
+.last-nav{
+    display: flex;
+    margin-left: 70rem;
+}
+
+.last-nav li{
+    padding-right: 2rem;
+}
